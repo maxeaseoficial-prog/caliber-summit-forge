@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { EmberField, PrimaryCTA, SecondaryCTA } from "./primitives";
+import heroHostAsset from "@/assets/hero-host.jpg.asset.json";
 
 export function Hero() {
   const [enter, setEnter] = useState(false);
