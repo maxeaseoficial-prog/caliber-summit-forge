@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { EmberField, PrimaryCTA, SecondaryCTA } from "./primitives";
-import heroHostAsset from "@/assets/hero-host.jpg.asset.json";
 
 export function Hero() {
   const [enter, setEnter] = useState(false);
@@ -26,33 +25,36 @@ export function Hero() {
     ) + ` [transition-delay:${i}ms]`;
 
   return (
-    <section
-      id="topo"
-      className="grain relative flex min-h-[100svh] items-center overflow-hidden bg-background pt-28 pb-20"
-    >
-      {/* Background photo */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0"
-        style={{ transform: `translate3d(0, ${offset * 0.12}px, 0)` }}
-      >
-        <img
-          src={heroHostAsset.url}
-          alt=""
-          className="h-full w-full object-cover"
-          style={{ objectPosition: "center 25%" }}
-        />
-      </div>
-
-      {/* Dark cinematic overlay */}
+    <section id="topo" className="grain relative min-h-[100svh] overflow-hidden bg-background">
+      {/* Base atmosphere preserved behind the new portrait composition */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "linear-gradient(180deg, oklch(0.08 0.01 40 / 82%) 0%, oklch(0.1 0.02 38 / 78%) 40%, oklch(0.13 0.004 40 / 92%) 100%)",
+            "radial-gradient(90% 75% at 78% 72%, oklch(0.42 0.14 32 / 26%), transparent 66%)," +
+            "radial-gradient(70% 52% at 18% 16%, oklch(0.55 0.11 45 / 14%), transparent 64%)," +
+            "var(--background)",
         }}
       />
+
+      {/* Leonardo portrait — the original aspect ratio is preserved */}
+      <div aria-hidden className="hero-portrait pointer-events-none absolute overflow-hidden">
+        <img
+          src="/images/leonardo-hero.jpg"
+          alt=""
+          width={1920}
+          height={2880}
+          fetchPriority="high"
+          decoding="async"
+          className="hero-portrait-image will-change-transform"
+          style={{ transform: `translate3d(0, ${offset * 0.03}px, 0) scale(1.03)` }}
+        />
+        <div aria-hidden className="hero-portrait-tone pointer-events-none absolute inset-0" />
+      </div>
+
+      {/* Responsive fade joins the photograph to the existing dark/magma world */}
+      <div aria-hidden className="hero-atmosphere pointer-events-none absolute inset-0" />
 
       {/* Warm ember glow accents */}
       <div
@@ -61,8 +63,8 @@ export function Hero() {
         style={{
           transform: `translate3d(0, ${offset * 0.18}px, 0)`,
           background:
-            "radial-gradient(120% 70% at 70% 100%, oklch(0.42 0.14 32 / 42%), transparent 62%)," +
-            "radial-gradient(80% 50% at 20% 20%, oklch(0.55 0.11 45 / 22%), transparent 60%)",
+            "radial-gradient(120% 70% at 70% 100%, oklch(0.42 0.14 32 / 30%), transparent 62%)," +
+            "radial-gradient(80% 50% at 20% 20%, oklch(0.55 0.11 45 / 18%), transparent 60%)",
         }}
       />
 
@@ -79,74 +81,78 @@ export function Hero() {
         <EmberField count={16} />
       </div>
 
-      <div className="relative mx-auto w-full max-w-[78rem] px-6 text-center md:px-10">
-        <h1
-          className={cn(
-            "mx-auto max-w-4xl font-display text-4xl leading-[1.05] tracking-tight text-foreground sm:text-6xl lg:text-7xl",
-            step(0),
-          )}
-          style={{ transitionTimingFunction: "var(--ease-cinematic)" }}
-        >
-          Cáliber Summit
-        </h1>
+      <div className="relative z-10 mx-auto grid w-full max-w-[78rem] grid-cols-1 px-6 pt-[48svh] pb-16 md:px-10 md:pt-[52svh] md:pb-20 lg:min-h-[100svh] lg:grid-cols-[minmax(0,56%)_minmax(0,44%)] lg:items-center lg:pt-28 lg:pb-20">
+        <div className="min-w-0 max-w-[46rem] text-left lg:pr-8 xl:pr-10">
+          <h1
+            className={cn(
+              "font-display text-4xl leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl",
+              step(0),
+            )}
+            style={{ transitionTimingFunction: "var(--ease-cinematic)" }}
+          >
+            Cáliber Summit
+          </h1>
 
-        <p
-          className={cn(
-            "mx-auto mt-8 max-w-2xl font-sans text-[0.65rem] font-medium uppercase leading-relaxed tracking-[0.3em] text-muted-foreground sm:text-[0.72rem]",
-            step(160),
-          )}
-          style={{ transitionTimingFunction: "var(--ease-cinematic)" }}
-        >
-          Uma experiência para empresários que decidiram subir o nível
-        </p>
+          <p
+            className={cn(
+              "mt-6 max-w-2xl font-sans text-[0.65rem] font-medium uppercase leading-relaxed tracking-[0.3em] text-muted-foreground sm:text-[0.72rem] lg:mt-7",
+              step(160),
+            )}
+            style={{ transitionTimingFunction: "var(--ease-cinematic)" }}
+          >
+            Uma experiência para empresários que decidiram subir o nível
+          </p>
 
-        <p
-          className={cn(
-            "mx-auto mt-8 max-w-4xl font-display text-4xl leading-[1.05] tracking-tight text-foreground sm:text-6xl lg:text-7xl",
-            step(300),
-          )}
-          style={{ transitionTimingFunction: "var(--ease-cinematic)" }}
-        >
-          O próximo nível do seu negócio
-          <span className="block text-ember-gradient">começa pelo seu.</span>
-        </p>
+          <p
+            className={cn(
+              "mt-7 max-w-[46rem] font-display text-4xl leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-[3.25rem] xl:text-6xl 2xl:text-7xl",
+              step(300),
+            )}
+            style={{ transitionTimingFunction: "var(--ease-cinematic)" }}
+          >
+            O próximo nível do seu negócio
+            <span className="block text-ember-gradient">começa pelo seu.</span>
+          </p>
 
-        <p
-          className={cn(
-            "mx-auto mt-8 max-w-xl text-base leading-relaxed text-muted-foreground",
-            step(440),
-          )}
-          style={{ transitionTimingFunction: "var(--ease-cinematic)" }}
-        >
-          Um encontro criado para empresários que buscam clareza, estrutura, conexões
-          estratégicas e crescimento consistente.
-        </p>
+          <p
+            className={cn(
+              "mt-7 max-w-xl text-base leading-relaxed text-muted-foreground lg:mt-8",
+              step(440),
+            )}
+            style={{ transitionTimingFunction: "var(--ease-cinematic)" }}
+          >
+            Um encontro criado para empresários que buscam clareza, estrutura, conexões estratégicas
+            e crescimento consistente.
+          </p>
 
-        <div
-          className={cn(
-            "mt-11 flex flex-col items-center justify-center gap-4 sm:flex-row",
-            step(580),
-          )}
-          style={{ transitionTimingFunction: "var(--ease-cinematic)" }}
-        >
-          <PrimaryCTA href="#participar" className="w-full sm:w-auto">
-            Quero participar
-          </PrimaryCTA>
-          <SecondaryCTA href="#summit" className="w-full sm:w-auto">
-            Conhecer o Summit
-          </SecondaryCTA>
+          <div
+            className={cn(
+              "mt-9 flex flex-col items-stretch gap-4 sm:flex-row sm:items-center sm:justify-start lg:mt-10",
+              step(580),
+            )}
+            style={{ transitionTimingFunction: "var(--ease-cinematic)" }}
+          >
+            <PrimaryCTA href="#participar" className="w-full sm:w-auto">
+              Quero participar
+            </PrimaryCTA>
+            <SecondaryCTA href="#summit" className="w-full sm:w-auto">
+              Conhecer o Summit
+            </SecondaryCTA>
+          </div>
+
+          <div
+            className={cn("mt-10 flex items-center justify-start gap-4 lg:mt-11", step(720))}
+            style={{ transitionTimingFunction: "var(--ease-cinematic)" }}
+          >
+            <span aria-hidden className="hidden h-px w-12 bg-copper/40 sm:block" />
+            <span className="font-sans text-[0.6rem] uppercase tracking-[0.32em] text-bronze sm:text-[0.68rem] sm:tracking-[0.38em]">
+              Mentalidade • Estrutura • Prosperidade
+            </span>
+            <span aria-hidden className="hidden h-px w-12 bg-copper/40 sm:block" />
+          </div>
         </div>
 
-        <div
-          className={cn("mt-12 flex items-center justify-center gap-4", step(720))}
-          style={{ transitionTimingFunction: "var(--ease-cinematic)" }}
-        >
-          <span aria-hidden className="hidden h-px w-16 bg-copper/40 sm:block" />
-          <span className="font-sans text-[0.6rem] uppercase tracking-[0.42em] text-bronze sm:text-[0.68rem]">
-            Mentalidade • Estrutura • Prosperidade
-          </span>
-          <span aria-hidden className="hidden h-px w-16 bg-copper/40 sm:block" />
-        </div>
+        <div aria-hidden className="hidden lg:block" />
       </div>
     </section>
   );
