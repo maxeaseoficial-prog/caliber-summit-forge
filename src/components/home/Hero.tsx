@@ -53,7 +53,7 @@ export function Hero() {
 
       <div className="relative mx-auto w-full max-w-[78rem] px-6 text-center md:px-10">
         <div
-          className={cn("mx-auto w-full max-w-[34rem] md:max-w-[42rem]", step(0))}
+          className={cn("mx-auto w-full max-w-[26rem] md:max-w-[34rem]", step(0))}
           style={{ transitionTimingFunction: "var(--ease-cinematic)" }}
         >
           <h1 className="sr-only">
@@ -64,7 +64,7 @@ export function Hero() {
 
         <p
           className={cn(
-            "mx-auto mt-10 max-w-2xl font-sans text-[0.65rem] font-medium uppercase leading-relaxed tracking-[0.3em] text-muted-foreground sm:text-[0.72rem]",
+            "mx-auto mt-8 max-w-2xl font-sans text-[0.65rem] font-medium uppercase leading-relaxed tracking-[0.3em] text-muted-foreground sm:text-[0.72rem]",
             step(160),
           )}
           style={{ transitionTimingFunction: "var(--ease-cinematic)" }}
@@ -110,7 +110,7 @@ export function Hero() {
         </div>
 
         <div
-          className={cn("mt-16 flex items-center justify-center gap-4", step(720))}
+          className={cn("mt-12 flex items-center justify-center gap-4", step(720))}
           style={{ transitionTimingFunction: "var(--ease-cinematic)" }}
         >
           <span aria-hidden className="hidden h-px w-16 bg-copper/40 sm:block" />
