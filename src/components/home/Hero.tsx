@@ -52,15 +52,15 @@ export function Hero() {
       </div>
 
       <div className="relative mx-auto w-full max-w-[78rem] px-6 text-center md:px-10">
-        <div
-          className={cn("mx-auto w-full max-w-[26rem] md:max-w-[34rem]", step(0))}
+        <h1
+          className={cn(
+            "mx-auto max-w-4xl font-display text-4xl leading-[1.05] tracking-tight text-foreground sm:text-6xl lg:text-7xl",
+            step(0),
+          )}
           style={{ transitionTimingFunction: "var(--ease-cinematic)" }}
         >
-          <h1 className="sr-only">
-            Cáliber Summit — o próximo nível do seu negócio começa pelo seu
-          </h1>
-          <Logo />
-        </div>
+          Cáliber Summit
+        </h1>
 
         <p
           className={cn(
