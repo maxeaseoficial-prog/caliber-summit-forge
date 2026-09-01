@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { EmberField, PrimaryCTA, SecondaryCTA } from "./primitives";
+import heroHostAsset from "@/assets/hero-host.jpg.asset.json";
 
 export function Hero() {
   const [enter, setEnter] = useState(false);
@@ -27,26 +28,53 @@ export function Hero() {
   return (
     <section
       id="topo"
-      className="grain relative flex min-h-[100svh] items-center overflow-hidden pt-28 pb-20"
+      className="grain relative flex min-h-[100svh] items-center overflow-hidden bg-background pt-28 pb-20"
     >
-      {/* Atmosphere */}
+      {/* Background photo */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0"
+        style={{ transform: `translate3d(0, ${offset * 0.12}px, 0)` }}
+      >
+        <img
+          src={heroHostAsset.url}
+          alt=""
+          className="h-full w-full object-cover"
+          style={{ objectPosition: "center 25%" }}
+        />
+      </div>
+
+      {/* Dark cinematic overlay */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(180deg, oklch(0.08 0.01 40 / 82%) 0%, oklch(0.1 0.02 38 / 78%) 40%, oklch(0.13 0.004 40 / 92%) 100%)",
+        }}
+      />
+
+      {/* Warm ember glow accents */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0"
         style={{
           transform: `translate3d(0, ${offset * 0.18}px, 0)`,
           background:
-            "radial-gradient(120% 70% at 50% 108%, oklch(0.45 0.16 34 / 45%), transparent 62%)," +
-            "radial-gradient(60% 40% at 50% 12%, oklch(0.32 0.09 40 / 35%), transparent 70%)",
+            "radial-gradient(120% 70% at 70% 100%, oklch(0.42 0.14 32 / 42%), transparent 62%)," +
+            "radial-gradient(80% 50% at 20% 20%, oklch(0.55 0.11 45 / 22%), transparent 60%)",
         }}
       />
+
+      {/* Bottom fade into page background */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-40"
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-48"
         style={{
           background: "linear-gradient(180deg, transparent, var(--background))",
         }}
       />
+
       <div className="hidden md:block">
         <EmberField count={16} />
       </div>
