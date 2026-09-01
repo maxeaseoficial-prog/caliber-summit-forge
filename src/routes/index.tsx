@@ -1,24 +1,44 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Header } from "@/components/home/Header";
+import { Hero } from "@/components/home/Hero";
+import { Manifesto } from "@/components/home/Manifesto";
+import { Pillars } from "@/components/home/Pillars";
+import { Experience } from "@/components/home/Experience";
+import { Audience } from "@/components/home/Audience";
+import { FinalCTA } from "@/components/home/FinalCTA";
+import { Footer } from "@/components/home/Footer";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const TITLE = "Cáliber Summit — Mentalidade, Estrutura e Prosperidade";
+const DESCRIPTION =
+  "Um encontro para empresários e líderes que buscam clareza, estrutura, conexões estratégicas e crescimento consistente.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: TITLE },
+      { name: "description", content: DESCRIPTION },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESCRIPTION },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <Manifesto />
+        <Pillars />
+        <Experience />
+        <Audience />
+        <FinalCTA />
+      </main>
+      <Footer />
+    </>
   );
 }
