@@ -1,4 +1,5 @@
 import { Reveal, SectionContainer, SectionEyebrow } from "./primitives";
+import experienceHostAsset from "@/assets/experience-host.jpg.asset.json";
 
 const ITEMS = [
   {
