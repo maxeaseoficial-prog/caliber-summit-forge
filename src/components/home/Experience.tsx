@@ -36,15 +36,32 @@ export function Experience() {
             </p>
           </Reveal>
           <Reveal delay={220}>
-            <div
-              aria-hidden
-              className="mt-12 hidden h-56 w-full overflow-hidden rounded-sm border border-border lg:block"
-              style={{
-                background:
-                  "radial-gradient(70% 80% at 20% 100%, oklch(0.48 0.16 34 / 45%), transparent 65%)," +
-                  "linear-gradient(140deg, oklch(0.17 0.006 40), oklch(0.13 0.004 40))",
-              }}
-            />
+            <figure className="mt-12 hidden h-72 w-full overflow-hidden rounded-sm border border-border lg:block">
+              <div className="relative h-full w-full">
+                <img
+                  src={experienceHostAsset.url}
+                  alt="Host do Cáliber Summit em ambiente executivo"
+                  width={1192}
+                  height={794}
+                  loading="lazy"
+                  className="h-full w-full object-cover object-center"
+                  style={{
+                    filter: "saturate(0.55) contrast(1.05) brightness(0.72) sepia(0.08)",
+                  }}
+                />
+                <div
+                  aria-hidden
+                  className="absolute inset-0"
+                  style={{
+                    background:
+                      "linear-gradient(180deg, oklch(0.13 0.004 40 / 42%) 0%, transparent 35%)," +
+                      "linear-gradient(0deg, oklch(0.13 0.004 40 / 78%) 0%, transparent 45%)," +
+                      "radial-gradient(80% 70% at 20% 100%, oklch(0.48 0.16 34 / 38%), transparent 65%)," +
+                      "radial-gradient(70% 60% at 80% 0%, oklch(0.62 0.13 45 / 18%), transparent 55%)",
+                  }}
+                />
+              </div>
+            </figure>
           </Reveal>
         </div>
 
