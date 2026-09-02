@@ -1,4 +1,5 @@
 import { Reveal, SectionContainer, SectionEyebrow } from "./primitives";
+import manifestoHostAsset from "@/assets/manifesto-host.jpg.asset.json";
 
 export function Manifesto() {
   return (
