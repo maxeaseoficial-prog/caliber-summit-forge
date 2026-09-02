@@ -1,4 +1,5 @@
 import { Reveal, SectionContainer, SectionEyebrow } from "./primitives";
+import manifestoHostAsset from "@/assets/manifesto-host.jpg.asset.json";
 
 export function Manifesto() {
   return (
@@ -31,16 +32,30 @@ export function Manifesto() {
         </div>
 
         <Reveal delay={200} className="min-w-0">
-          <div
-            aria-hidden
-            className="grain relative h-72 w-full overflow-hidden rounded-sm border border-border sm:h-96 lg:h-full lg:min-h-[26rem]"
-            style={{
-              background:
-                "radial-gradient(80% 60% at 30% 100%, oklch(0.5 0.17 36 / 55%), transparent 60%)," +
-                "radial-gradient(60% 50% at 80% 10%, oklch(0.3 0.06 50 / 60%), transparent 70%)," +
-                "linear-gradient(160deg, oklch(0.18 0.006 40), oklch(0.13 0.004 40))",
-            }}
-          >
+          <figure className="relative h-72 w-full overflow-hidden rounded-sm border border-border sm:h-96 lg:h-full lg:min-h-[26rem]">
+            <img
+              src={manifestoHostAsset.url}
+              alt="Host do Cáliber Summit em ambiente de negócios"
+              width={1192}
+              height={1588}
+              loading="lazy"
+              className="h-full w-full object-cover object-center"
+              style={{
+                filter: "saturate(0.52) contrast(1.06) brightness(0.68) sepia(0.08)",
+              }}
+            />
+            <div
+              aria-hidden
+              className="absolute inset-0"
+              style={{
+                background:
+                  "linear-gradient(180deg, oklch(0.13 0.004 40 / 52%) 0%, transparent 30%)," +
+                  "linear-gradient(0deg, oklch(0.13 0.004 40 / 82%) 0%, transparent 45%)," +
+                  "linear-gradient(90deg, oklch(0.13 0.004 40 / 55%) 0%, transparent 35%)," +
+                  "radial-gradient(80% 60% at 30% 100%, oklch(0.5 0.17 36 / 38%), transparent 60%)," +
+                  "radial-gradient(60% 50% at 80% 10%, oklch(0.62 0.13 45 / 18%), transparent 70%)",
+              }}
+            />
             <div
               className="absolute inset-x-0 bottom-0 h-1/2"
               style={{
@@ -52,7 +67,7 @@ export function Manifesto() {
               className="absolute bottom-0 left-0 h-px w-full"
               style={{ background: "var(--gradient-rule)" }}
             />
-          </div>
+          </figure>
         </Reveal>
       </div>
     </SectionContainer>
