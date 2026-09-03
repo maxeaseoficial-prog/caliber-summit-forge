@@ -31,6 +31,22 @@ export function Header() {
       )}
       style={{ transitionTimingFunction: "var(--ease-cinematic)" }}
     >
+      <div
+        className="relative overflow-hidden border-b border-border/40 bg-background/90 py-2 text-center backdrop-blur-sm"
+        style={{
+          background:
+            "linear-gradient(90deg, transparent 0%, oklch(0.25 0.08 32 / 22%) 50%, transparent 100%)," +
+            "var(--background)",
+        }}
+      >
+        <p className="relative z-10 mx-auto max-w-[78rem] px-6 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.22em] text-bronze sm:text-[0.68rem] sm:tracking-[0.26em]">
+          <span aria-hidden className="mr-2 inline-block text-ember">
+            ◆
+          </span>
+          Exclusivo para donos de empresa com 10 a 1000 funcionários
+        </p>
+      </div>
+
       <div className="mx-auto grid w-full max-w-[78rem] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-6 py-4 md:px-10">
         <a href="#topo" aria-label="Cáliber Summit — início" className="min-w-0">
           <Logo variant="compact" className="w-32 md:w-40" />
