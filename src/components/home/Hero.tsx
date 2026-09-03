@@ -81,7 +81,7 @@ export function Hero() {
         <EmberField count={16} />
       </div>
 
-      <div className="relative z-10 mx-auto grid w-full max-w-[78rem] grid-cols-1 px-6 pt-[48svh] pb-16 md:px-10 md:pt-[52svh] md:pb-20 lg:min-h-[100svh] lg:grid-cols-[minmax(0,56%)_minmax(0,44%)] lg:items-center lg:pt-28 lg:pb-20">
+      <div className="relative z-10 mx-auto grid w-full max-w-[78rem] grid-cols-1 px-6 pt-[54svh] pb-16 md:px-10 md:pt-[58svh] md:pb-20 lg:min-h-[100svh] lg:grid-cols-[minmax(0,56%)_minmax(0,44%)] lg:items-center lg:pt-44 lg:pb-20">
         <div className="min-w-0 max-w-[46rem] text-left lg:pr-8 xl:pr-10">
           <h1
             className={cn(
