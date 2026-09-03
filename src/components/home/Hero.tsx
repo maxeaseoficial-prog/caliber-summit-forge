@@ -83,30 +83,10 @@ export function Hero() {
 
       <div className="relative z-10 mx-auto grid w-full max-w-[78rem] grid-cols-1 px-6 pt-[54svh] pb-16 md:px-10 md:pt-[58svh] md:pb-20 lg:min-h-[100svh] lg:grid-cols-[minmax(0,56%)_minmax(0,44%)] lg:items-center lg:pt-44 lg:pb-20">
         <div className="min-w-0 max-w-[46rem] text-left lg:pr-8 xl:pr-10">
-          <h1
+          <p
             className={cn(
-              "font-display text-4xl leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl",
+              "max-w-[46rem] font-display text-4xl leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-[3.25rem] xl:text-6xl 2xl:text-7xl",
               step(0),
-            )}
-            style={{ transitionTimingFunction: "var(--ease-cinematic)" }}
-          >
-            Cáliber Summit
-          </h1>
-
-          <p
-            className={cn(
-              "mt-6 max-w-2xl font-sans text-[0.65rem] font-medium uppercase leading-relaxed tracking-[0.3em] text-muted-foreground sm:text-[0.72rem] lg:mt-7",
-              step(160),
-            )}
-            style={{ transitionTimingFunction: "var(--ease-cinematic)" }}
-          >
-            Uma experiência para empresários que decidiram subir o nível
-          </p>
-
-          <p
-            className={cn(
-              "mt-7 max-w-[46rem] font-display text-4xl leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-[3.25rem] xl:text-6xl 2xl:text-7xl",
-              step(300),
             )}
             style={{ transitionTimingFunction: "var(--ease-cinematic)" }}
           >
