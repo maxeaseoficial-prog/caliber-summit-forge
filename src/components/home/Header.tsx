@@ -32,15 +32,11 @@ export function Header() {
       style={{ transitionTimingFunction: "var(--ease-cinematic)" }}
     >
       <div
-        className="relative overflow-hidden border-b border-border/40 bg-background/90 py-2 text-center backdrop-blur-sm"
-        style={{
-          background:
-            "linear-gradient(90deg, transparent 0%, oklch(0.25 0.08 32 / 22%) 50%, transparent 100%)," +
-            "var(--background)",
-        }}
+        className="relative overflow-hidden border-b border-white/10 py-2 text-center"
+        style={{ backgroundImage: "var(--gradient-ember)" }}
       >
-        <p className="relative z-10 mx-auto max-w-[78rem] px-6 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.22em] text-bronze sm:text-[0.68rem] sm:tracking-[0.26em]">
-          <span aria-hidden className="mr-2 inline-block text-ember">
+        <p className="relative z-10 mx-auto max-w-[78rem] px-6 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.22em] text-white sm:text-[0.68rem] sm:tracking-[0.26em]">
+          <span aria-hidden className="mr-2 inline-block text-white/90">
             ◆
           </span>
           Exclusivo para donos de empresa com 10 a 1000 funcionários
