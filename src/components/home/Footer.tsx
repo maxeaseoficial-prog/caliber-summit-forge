@@ -12,7 +12,7 @@ export function Footer() {
     <SectionContainer as="footer" id="contato" className="border-t border-border py-14">
       <div className="grid gap-10 md:grid-cols-[minmax(0,1fr)_auto] md:items-center">
         <div className="min-w-0">
-          <Logo variant="compact" className="w-36" />
+          <Logo variant="compact" className="w-44 md:w-52" />
           <p className="mt-5 font-sans text-[0.62rem] uppercase tracking-[0.38em] text-bronze">
             Mentalidade • Estrutura • Prosperidade
           </p>
