@@ -163,8 +163,8 @@ export function Logo({
     <img
       src={logoAsset.url}
       alt="Cáliber Summit"
-      width={1656}
-      height={932}
+      width={1983}
+      height={793}
       loading={variant === "full" ? "eager" : "lazy"}
       className={cn("h-auto w-full select-none object-contain", className)}
     />
