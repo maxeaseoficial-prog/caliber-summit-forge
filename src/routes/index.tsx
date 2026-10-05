@@ -6,6 +6,7 @@ import { Manifesto } from "@/components/home/Manifesto";
 import { Pillars } from "@/components/home/Pillars";
 import { Experience } from "@/components/home/Experience";
 import { Audience } from "@/components/home/Audience";
+import { Testimonials } from "@/components/home/Testimonials";
 import { FinalCTA } from "@/components/home/FinalCTA";
 import { Footer } from "@/components/home/Footer";
 
@@ -38,6 +39,7 @@ function Index() {
         <Pillars />
         <Experience />
         <Audience />
+        <Testimonials />
         <FinalCTA />
       </main>
       <Footer />
