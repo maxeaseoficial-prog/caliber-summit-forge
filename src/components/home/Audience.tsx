@@ -22,7 +22,7 @@ export function Audience() {
           <Reveal delay={160}>
             <p className="max-w-xl text-base leading-relaxed text-muted-foreground">
               O Cáliber Summit foi criado para empresários e líderes que entenderam que
-              crescer exige mais do que trabalhar mais — exige pensar melhor, estruturar
+              crescer exige mais do que trabalhar mais. É preciso pensar melhor, estruturar
               melhor e decidir melhor.
             </p>
           </Reveal>

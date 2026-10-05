@@ -67,7 +67,7 @@ export function Testimonials() {
                     <iframe
                       className="absolute inset-0 h-full w-full border-0"
                       src={`https://www.youtube-nocookie.com/embed/${videoId}?controls=1&playsinline=1&autoplay=1`}
-                      title={`${testimonial.title} — Cáliber Summit`}
+                      title={`${testimonial.title} do Cáliber Summit`}
                       referrerPolicy="strict-origin-when-cross-origin"
                       allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
                       allowFullScreen

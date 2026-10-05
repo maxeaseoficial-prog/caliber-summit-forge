@@ -81,7 +81,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Cáliber Summit — mentalidade, estrutura e prosperidade para empresários e líderes.",
+          "Cáliber Summit: mentalidade, estrutura e prosperidade para empresários e líderes.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

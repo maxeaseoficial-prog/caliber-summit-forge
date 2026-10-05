@@ -10,7 +10,7 @@ import { Testimonials } from "@/components/home/Testimonials";
 import { FinalCTA } from "@/components/home/FinalCTA";
 import { Footer } from "@/components/home/Footer";
 
-const TITLE = "Cáliber Summit — Mentalidade, Estrutura e Prosperidade";
+const TITLE = "Cáliber Summit: Mentalidade, Estrutura e Prosperidade";
 const DESCRIPTION =
   "Um encontro para empresários e líderes que buscam clareza, estrutura, conexões estratégicas e crescimento consistente.";
 

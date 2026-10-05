@@ -44,7 +44,7 @@ export function Header() {
       </div>
 
       <div className="mx-auto grid w-full max-w-[78rem] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-6 py-4 md:px-10">
-        <a href="#topo" aria-label="Cáliber Summit — início" className="min-w-0">
+        <a href="#topo" aria-label="Ir para o início do Cáliber Summit" className="min-w-0">
           <Logo variant="compact" className="w-36 md:w-48" />
         </a>
 
