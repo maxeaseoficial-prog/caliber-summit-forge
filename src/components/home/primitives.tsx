@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
-import logoAsset from "@/assets/caliber-summit-logo.png.asset.json";
+import logoAsset from "@/assets/rpm-summit-logo";
 /** Scroll-triggered fade + translate reveal. Respects prefers-reduced-motion. */
 export function Reveal({
   children,
