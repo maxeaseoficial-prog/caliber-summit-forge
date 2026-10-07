@@ -1,4 +1,4 @@
-import leonardoHeroAsset from "@/assets/leonardo-hero-original.jpg.asset.json";
+import leonardoHeroAsset from "@/assets/leonardo-lounge.png.asset.json";
 import { Reveal, SectionEyebrow } from "./primitives";
 
 const METRICS = [
@@ -17,25 +17,17 @@ export function GuideSection() {
       <img
         src={leonardoHeroAsset.url}
         alt="Leonardo Froese"
-        className="pointer-events-none absolute inset-x-0 top-0 h-[360px] w-full select-none object-cover object-[68%_center] sm:h-[420px] lg:inset-0 lg:h-full lg:object-cover lg:object-[70%_center]"
+        className="pointer-events-none absolute inset-x-0 top-0 h-[360px] w-full select-none object-cover object-[70%_center] sm:h-[420px] lg:inset-0 lg:h-full lg:object-cover lg:object-[65%_center]"
       />
 
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 h-[430px] lg:inset-0 lg:h-full"
-        style={{
-          background:
-            "linear-gradient(90deg, rgba(0,0,0,0.94) 0%, rgba(0,0,0,0.80) 30%, rgba(0,0,0,0.56) 48%, rgba(0,0,0,0.18) 70%, rgba(0,0,0,0) 100%)",
-        }}
+        className="guide-photo-shade pointer-events-none absolute inset-x-0 top-0 h-[430px] lg:inset-0 lg:h-full"
       />
 
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 h-[460px] lg:inset-0 lg:h-full"
-        style={{
-          background:
-            "linear-gradient(180deg, rgba(0,0,0,0.06) 0%, rgba(0,0,0,0.08) 55%, rgba(0,0,0,0.55) 82%, var(--background) 100%)",
-        }}
+        className="guide-photo-fade pointer-events-none absolute inset-x-0 top-0 h-[460px] lg:inset-0 lg:h-full"
       />
 
       <div className="relative z-10 mx-auto w-full max-w-[78rem] px-6 pb-16 pt-[300px] sm:px-10 sm:pt-[340px] lg:flex lg:min-h-[640px] lg:items-center lg:px-10 lg:py-16 xl:min-h-[660px]">
