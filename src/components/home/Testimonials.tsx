@@ -11,7 +11,7 @@ type Testimonial = {
 const TESTIMONIALS: readonly Testimonial[] = [
   { id: "depoimento-01", title: "Depoimento 01", videoId: "s5Xw05eyuOM" },
   { id: "depoimento-02", title: "Depoimento 02", videoId: "nGj5NN4XvyM" },
-  { id: "depoimento-03", title: "Depoimento 03", videoId: null },
+  { id: "depoimento-03", title: "Depoimento 03", videoId: "odkL-rQqsC8" },
 ];
 
 export function Testimonials() {
