@@ -17,7 +17,7 @@ export function GuideSection() {
       <img
         src={leonardoHeroAsset.url}
         alt="Leonardo Froese"
-        className="pointer-events-none absolute inset-x-0 top-0 h-[360px] w-full select-none object-cover object-[70%_center] sm:h-[420px] lg:inset-0 lg:h-full lg:object-cover lg:object-[65%_center]"
+        className="pointer-events-none absolute right-0 top-0 h-[360px] w-full select-none object-contain object-top sm:h-[420px] lg:inset-y-0 lg:left-auto lg:right-0 lg:h-full lg:w-[58%] lg:max-w-none lg:object-contain lg:object-right"
       />
 
       <div
