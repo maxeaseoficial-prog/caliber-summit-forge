@@ -25,7 +25,6 @@ export function Hero() {
 
   return (
     <section id="topo" className="grain relative min-h-[100svh] overflow-hidden bg-background">
-      {/* Base atmosphere preserved behind the new portrait composition */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0"
@@ -37,7 +36,6 @@ export function Hero() {
         }}
       />
 
-      {/* Leonardo portrait — the original aspect ratio is preserved */}
       <div aria-hidden className="hero-portrait pointer-events-none absolute overflow-hidden">
         <img
           src="/images/leonardo-hero.jpg"
@@ -52,10 +50,8 @@ export function Hero() {
         <div aria-hidden className="hero-portrait-tone pointer-events-none absolute inset-0" />
       </div>
 
-      {/* Responsive fade joins the photograph to the existing dark/magma world */}
       <div aria-hidden className="hero-atmosphere pointer-events-none absolute inset-0" />
 
-      {/* Warm ember glow accents */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0"
@@ -67,7 +63,6 @@ export function Hero() {
         }}
       />
 
-      {/* Bottom fade into page background */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-x-0 bottom-0 h-48"
@@ -88,8 +83,8 @@ export function Hero() {
             )}
             style={{ transitionTimingFunction: "var(--ease-cinematic)" }}
           >
-            O próximo nível do seu negócio
-            <span className="block text-ember-gradient">começa pelo seu.</span>
+            Sua empresa cresceu.
+            <span className="block text-ember-gradient">Agora ela precisa ficar mais forte.</span>
           </p>
 
           <p
@@ -99,8 +94,7 @@ export function Hero() {
             )}
             style={{ transitionTimingFunction: "var(--ease-cinematic)" }}
           >
-            Um encontro criado para empresários que buscam clareza, estrutura, conexões estratégicas
-            e crescimento consistente.
+            Descubra onde Pessoas, Finanças e Vendas estão travando lucro, autonomia e crescimento, e qual prioridade precisa ganhar estrutura primeiro.
           </p>
 
           <div
