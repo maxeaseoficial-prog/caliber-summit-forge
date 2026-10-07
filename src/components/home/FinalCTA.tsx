@@ -28,8 +28,11 @@ export function FinalCTA() {
         </Reveal>
         <Reveal delay={280}>
           <div className="mt-12">
-            <PrimaryCTA href="#contato" className="px-10 py-5 text-[0.8rem]">
-              Quero participar do Cáliber Summit
+            <PrimaryCTA
+              href="#contato"
+              className="rounded-full px-10 py-5 text-[0.8rem] [--gradient-ember:linear-gradient(135deg,#004d00_0%,#008000_52%,#16a016_100%)]"
+            >
+              Quero Participar
             </PrimaryCTA>
           </div>
         </Reveal>
