@@ -2,17 +2,11 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { Logo } from "./primitives";
 
-const NAV = [
-  { label: "O Summit", href: "#summit" },
-  { label: "Experiência", href: "#experiencia" },
-  { label: "Para quem é", href: "#para-quem" },
-  { label: "Pilares", href: "#pilares" },
-  { label: "Contato", href: "#contato" },
-];
+const TICKET_GRADIENT =
+  "linear-gradient(135deg, #004d00 0%, #008000 52%, #16a016 100%)";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
-  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -25,17 +19,17 @@ export function Header() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-500",
-        scrolled || open
-          ? "border-b border-border bg-background/80 backdrop-blur-md"
+        scrolled
+          ? "border-b border-border bg-background/90 backdrop-blur-md"
           : "border-b border-transparent bg-transparent",
       )}
       style={{ transitionTimingFunction: "var(--ease-cinematic)" }}
     >
       <div
-        className="relative overflow-hidden border-b border-white/10 py-2 text-center"
+        className="relative overflow-hidden border-b border-white/10 px-2 text-center"
         style={{ backgroundImage: "var(--gradient-ember)" }}
       >
-        <p className="relative z-10 mx-auto max-w-[78rem] px-6 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.22em] text-white sm:text-[0.68rem] sm:tracking-[0.26em]">
+        <p className="relative z-10 mx-auto max-w-[78rem] px-6 py-2 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.22em] text-white sm:text-[0.68rem] sm:tracking-[0.26em]">
           <span aria-hidden className="mr-2 inline-block text-white/90">
             ◆
           </span>
@@ -43,82 +37,31 @@ export function Header() {
         </p>
       </div>
 
-      <div className="mx-auto grid w-full max-w-[78rem] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-6 py-4 md:px-10">
-        <a href="#topo" aria-label="Ir para o início do Cáliber Summit" className="min-w-0">
-          <Logo variant="compact" className="w-36 md:w-48" />
+      <div className="mx-auto grid w-full max-w-[78rem] grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-3 px-4 py-3 sm:gap-6 sm:px-6 md:px-10 md:py-4">
+        <a
+          href="#topo"
+          aria-label="Ir para o início do Cáliber Summit"
+          className="min-w-0 justify-self-start"
+        >
+          <Logo variant="compact" className="w-28 sm:w-36 md:w-44" />
         </a>
 
-        <nav aria-label="Principal" className="hidden items-center gap-9 lg:flex">
-          {NAV.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="nav-link font-sans text-[0.72rem] font-medium uppercase tracking-[0.2em]"
-            >
-              {item.label}
-            </a>
-          ))}
-          <a
-            href="#participar"
-            className="rounded-sm border border-copper/40 px-5 py-2.5 font-sans text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-foreground transition-colors duration-300 hover:border-ember/70 hover:bg-copper/10"
-          >
-            Quero participar
-          </a>
-        </nav>
+        <div className="min-w-0 text-center leading-tight">
+          <p className="font-sans text-[0.68rem] font-bold uppercase tracking-[0.08em] text-foreground sm:text-sm md:text-base">
+            10 Dezembro
+          </p>
+          <p className="mt-0.5 font-sans text-[0.6rem] tracking-wide text-muted-foreground sm:text-xs md:text-sm">
+            Cuiabá - MT
+          </p>
+        </div>
 
-        <button
-          type="button"
-          aria-expanded={open}
-          aria-controls="menu-mobile"
-          aria-label={open ? "Fechar menu" : "Abrir menu"}
-          onClick={() => setOpen((v) => !v)}
-          className="flex h-11 w-11 shrink-0 items-center justify-center justify-self-end lg:hidden"
+        <a
+          href="#participar"
+          className="justify-self-end rounded-full px-4 py-2.5 font-sans text-[0.62rem] font-bold uppercase tracking-[0.12em] text-white transition-[filter,transform] duration-300 hover:brightness-115 active:translate-y-px sm:px-7 sm:py-3 sm:text-[0.72rem] md:min-w-40 md:text-center"
+          style={{ backgroundImage: TICKET_GRADIENT }}
         >
-          <span className="relative block h-3 w-6">
-            <span
-              className={cn(
-                "absolute left-0 h-px w-full bg-foreground transition-all duration-300",
-                open ? "top-1.5 rotate-45" : "top-0",
-              )}
-            />
-            <span
-              className={cn(
-                "absolute left-0 h-px w-full bg-foreground transition-all duration-300",
-                open ? "top-1.5 -rotate-45" : "top-3",
-              )}
-            />
-          </span>
-        </button>
-      </div>
-
-      <div
-        id="menu-mobile"
-        hidden={!open}
-        className="border-t border-border bg-background/95 backdrop-blur-md lg:hidden"
-      >
-        <nav aria-label="Principal (mobile)" className="mx-auto max-w-[78rem] px-6 py-6">
-          <ul className="flex flex-col">
-            {NAV.map((item) => (
-              <li key={item.href} className="border-b border-border/70 last:border-0">
-                <a
-                  href={item.href}
-                  onClick={() => setOpen(false)}
-                  className="block py-4 font-display text-2xl tracking-wide text-foreground/90"
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-          <a
-            href="#participar"
-            onClick={() => setOpen(false)}
-            className="mt-6 block rounded-sm px-6 py-4 text-center font-sans text-[0.75rem] font-semibold uppercase tracking-[0.22em] text-primary-foreground"
-            style={{ backgroundImage: "var(--gradient-ember)" }}
-          >
-            Quero participar
-          </a>
-        </nav>
+          Ingressos
+        </a>
       </div>
     </header>
   );
