@@ -7,18 +7,15 @@ type Testimonial = {
   title: string;
   videoId: string | null;
 };
-
 // Preencha os IDs do YouTube, nesta ordem, quando os três links forem fornecidos.
 // Mantenha null enquanto o vídeo não estiver disponível; não use vídeos de exemplo.
 const TESTIMONIALS: readonly Testimonial[] = [
-  { id: "depoimento-01", title: "Depoimento 01", videoId: null },
+  { id: "depoimento-01", title: "Depoimento 01", videoId: "s5Xw05eyuOM" },
   { id: "depoimento-02", title: "Depoimento 02", videoId: null },
   { id: "depoimento-03", title: "Depoimento 03", videoId: null },
 ];
-
 export function Testimonials() {
   const [activeTestimonial, setActiveTestimonial] = useState<string | null>(null);
-
   return (
     <SectionContainer
       id="depoimentos"
@@ -35,7 +32,6 @@ export function Testimonials() {
           </h2>
         </Reveal>
       </div>
-
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
         {TESTIMONIALS.map((testimonial, index) => {
           const videoId = testimonial.videoId?.trim() ?? "";
@@ -55,7 +51,6 @@ export function Testimonials() {
               </span>
             </div>
           );
-
           return (
             <Reveal key={testimonial.id} delay={160 + index * 100} className="min-w-0">
               <article
