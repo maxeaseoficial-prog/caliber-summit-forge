@@ -89,7 +89,7 @@ export function Hero() {
 
           <p
             className={cn(
-              "mt-7 max-w-xl text-base leading-relaxed text-muted-foreground lg:mt-8",
+              "mt-7 max-w-xl text-lg font-medium leading-relaxed text-foreground sm:text-xl lg:mt-8",
               step(440),
             )}
             style={{ transitionTimingFunction: "var(--ease-cinematic)" }}
