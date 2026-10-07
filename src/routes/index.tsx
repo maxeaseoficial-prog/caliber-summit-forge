@@ -39,10 +39,10 @@ function Index() {
         <ScarcityTicker />
         <VSLSection />
         <PainPoints />
+        <Audience />
         <Manifesto />
         <Pillars />
         <Experience />
-        <Audience />
         <Testimonials />
         <FinalCTA />
       </main>
