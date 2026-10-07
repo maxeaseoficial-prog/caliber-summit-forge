@@ -3,18 +3,18 @@ import { Reveal, SectionContainer, SectionEyebrow } from "./primitives";
 const PILLARS = [
   {
     n: "01",
-    title: "Mentalidade",
-    text: "A forma como você pensa define o limite das decisões que consegue tomar.",
+    title: "RAIZ",
+    text: "Antes de acelerar, você precisa entender o que realmente está travando a empresa.",
   },
   {
     n: "02",
-    title: "Estrutura",
-    text: "Crescimento sustentável exige processos, estratégia e uma empresa preparada para avançar.",
+    title: "PRIORIDADE",
+    text: "Nem tudo precisa ser resolvido agora. Gestão é saber o que vem primeiro.",
   },
   {
     n: "03",
-    title: "Prosperidade",
-    text: "Resultado é consequência de visão, execução, relacionamento e decisões melhores.",
+    title: "MÉTRICA",
+    text: "O que não é medido vira opinião. Números claros transformam decisão em direção.",
   },
 ];
 
