@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/home/Header";
 import { Hero } from "@/components/home/Hero";
 import { ScarcityTicker } from "@/components/home/ScarcityTicker";
-import { VSLSection } from "@/components/home/VSLSection";
 import { PainPoints } from "@/components/home/PainPoints";
 import { Pillars } from "@/components/home/Pillars";
 import { Experience } from "@/components/home/Experience";
@@ -10,6 +9,7 @@ import { Audience } from "@/components/home/Audience";
 import { GuideSection } from "@/components/home/GuideSection";
 import { PrimaryCTA } from "@/components/home/primitives";
 import { Testimonials } from "@/components/home/Testimonials";
+import { EventInfo } from "@/components/home/EventInfo";
 import { FinalCTA } from "@/components/home/FinalCTA";
 import { Footer } from "@/components/home/Footer";
 
@@ -38,7 +38,6 @@ function Index() {
       <main>
         <Hero />
         <ScarcityTicker />
-        <VSLSection />
         <PainPoints />
         <Audience />
         <GuideSection />
@@ -55,6 +54,7 @@ function Index() {
         <Pillars />
         <Experience />
         <Testimonials />
+        <EventInfo />
         <FinalCTA />
       </main>
       <Footer />
