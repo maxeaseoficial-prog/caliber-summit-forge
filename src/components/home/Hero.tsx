@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import { EmberField, PrimaryCTA, SecondaryCTA } from "./primitives";
+import { EmberField, PrimaryCTA } from "./primitives";
 
 export function Hero() {
   const [enter, setEnter] = useState(false);
@@ -99,32 +99,18 @@ export function Hero() {
 
           <div
             className={cn(
-              "mt-9 flex flex-col items-stretch gap-4 sm:flex-row sm:items-center sm:justify-start lg:mt-10",
+              "mt-9 flex justify-center lg:mt-10",
               step(580),
             )}
             style={{ transitionTimingFunction: "var(--ease-cinematic)" }}
           >
             <PrimaryCTA
               href="#participar"
-              className="w-full sm:w-auto"
+              className="w-full rounded-full px-10 sm:w-auto sm:min-w-56"
               gradient="linear-gradient(135deg, #004d00 0%, #008000 52%, #16a016 100%)"
             >
               Quero participar
             </PrimaryCTA>
-            <SecondaryCTA href="#summit" className="w-full sm:w-auto">
-              Conhecer o Summit
-            </SecondaryCTA>
-          </div>
-
-          <div
-            className={cn("mt-10 flex items-center justify-start gap-4 lg:mt-11", step(720))}
-            style={{ transitionTimingFunction: "var(--ease-cinematic)" }}
-          >
-            <span aria-hidden className="hidden h-px w-12 bg-copper/40 sm:block" />
-            <span className="font-sans text-[0.6rem] uppercase tracking-[0.32em] text-bronze sm:text-[0.68rem] sm:tracking-[0.38em]">
-              Mentalidade • Estrutura • Prosperidade
-            </span>
-            <span aria-hidden className="hidden h-px w-12 bg-copper/40 sm:block" />
           </div>
         </div>
 
