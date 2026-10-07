@@ -5,7 +5,6 @@ import { EmberField, PrimaryCTA, SecondaryCTA } from "./primitives";
 export function Hero() {
   const [enter, setEnter] = useState(false);
   const [offset, setOffset] = useState(0);
-
   useEffect(() => {
     const t = window.setTimeout(() => setEnter(true), 60);
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -80,7 +79,6 @@ export function Hero() {
       <div className="hidden md:block">
         <EmberField count={16} />
       </div>
-
       <div className="relative z-10 mx-auto grid w-full max-w-[78rem] grid-cols-1 px-6 pt-[54svh] pb-16 md:px-10 md:pt-[58svh] md:pb-20 lg:min-h-[100svh] lg:grid-cols-[minmax(0,56%)_minmax(0,44%)] lg:items-center lg:pt-44 lg:pb-20">
         <div className="min-w-0 max-w-[46rem] text-left lg:pr-8 xl:pr-10">
           <p
@@ -112,7 +110,11 @@ export function Hero() {
             )}
             style={{ transitionTimingFunction: "var(--ease-cinematic)" }}
           >
-            <PrimaryCTA href="#participar" className="w-full sm:w-auto">
+            <PrimaryCTA
+              href="#participar"
+              className="w-full sm:w-auto"
+              gradient="linear-gradient(135deg, #004d00 0%, #008000 52%, #16a016 100%)"
+            >
               Quero participar
             </PrimaryCTA>
             <SecondaryCTA href="#summit" className="w-full sm:w-auto">

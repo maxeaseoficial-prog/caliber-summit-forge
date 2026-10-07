@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import logoAsset from "@/assets/caliber-summit-logo.png.asset.json";
-
 /** Scroll-triggered fade + translate reveal. Respects prefers-reduced-motion. */
 export function Reveal({
   children,
@@ -16,7 +15,6 @@ export function Reveal({
 }) {
   const ref = useRef<HTMLElement | null>(null);
   const [shown, setShown] = useState(false);
-
   useEffect(() => {
     const node = ref.current;
     if (!node) return;
@@ -36,7 +34,6 @@ export function Reveal({
     io.observe(node);
     return () => io.disconnect();
   }, []);
-
   return (
     <Tag
       ref={ref as never}
@@ -56,7 +53,6 @@ export function Reveal({
     </Tag>
   );
 }
-
 export function SectionContainer({
   children,
   className,
@@ -74,7 +70,6 @@ export function SectionContainer({
     </Tag>
   );
 }
-
 export function SectionEyebrow({
   children,
   className,
@@ -94,15 +89,16 @@ export function SectionEyebrow({
     </span>
   );
 }
-
 export function PrimaryCTA({
   children,
   href,
   className,
+  gradient,
 }: {
   children: ReactNode;
   href: string;
   className?: string;
+  gradient?: string;
 }) {
   return (
     <a
@@ -111,7 +107,7 @@ export function PrimaryCTA({
         "group relative inline-flex items-center justify-center overflow-hidden rounded-sm px-8 py-4 font-sans text-[0.78rem] font-semibold uppercase tracking-[0.22em] text-primary-foreground transition-[filter,transform] duration-300 hover:brightness-115 active:translate-y-px",
         className,
       )}
-      style={{ backgroundImage: "var(--gradient-ember)" }}
+      style={{ backgroundImage: gradient ?? "var(--gradient-ember)" }}
     >
       <span
         aria-hidden
@@ -125,7 +121,6 @@ export function PrimaryCTA({
     </a>
   );
 }
-
 export function SecondaryCTA({
   children,
   href,
@@ -147,7 +142,6 @@ export function SecondaryCTA({
     </a>
   );
 }
-
 /**
  * Brand mark. Swap the imported asset pointer to update the official logo —
  * no component changes required.
@@ -170,7 +164,6 @@ export function Logo({
     />
   );
 }
-
 export function EmberField({ count = 14 }: { count?: number }) {
   const seeds = Array.from({ length: count }, (_, i) => i);
   return (
