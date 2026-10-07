@@ -93,12 +93,10 @@ export function PrimaryCTA({
   children,
   href,
   className,
-  gradient,
 }: {
   children: ReactNode;
   href: string;
   className?: string;
-  gradient?: string;
 }) {
   return (
     <a
@@ -107,7 +105,7 @@ export function PrimaryCTA({
         "group relative inline-flex items-center justify-center overflow-hidden rounded-sm px-8 py-4 font-sans text-[0.78rem] font-semibold uppercase tracking-[0.22em] text-primary-foreground transition-[filter,transform] duration-300 hover:brightness-115 active:translate-y-px",
         className,
       )}
-      style={{ backgroundImage: gradient ?? "var(--gradient-ember)" }}
+      style={{ backgroundImage: "var(--gradient-ember)" }}
     >
       <span
         aria-hidden
@@ -143,7 +141,7 @@ export function SecondaryCTA({
   );
 }
 /**
- * Brand mark. Swap the imported asset pointer to update the official logo —
+ * Shared brand mark. Swap the imported asset pointer to update the official logo —
  * no component changes required.
  */
 export function Logo({
@@ -156,9 +154,9 @@ export function Logo({
   return (
     <img
       src={logoAsset.url}
-      alt="Cáliber Summit"
-      width={1983}
-      height={793}
+      alt="RPM Summit"
+      width={600}
+      height={200}
       loading={variant === "full" ? "eager" : "lazy"}
       className={cn("h-auto w-full select-none object-contain", className)}
     />
