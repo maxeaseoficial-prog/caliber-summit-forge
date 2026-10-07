@@ -94,7 +94,8 @@ export function Hero() {
             )}
             style={{ transitionTimingFunction: "var(--ease-cinematic)" }}
           >
-            Descubra onde Pessoas, Finanças e Vendas estão travando lucro, autonomia e crescimento, e qual prioridade precisa ganhar estrutura primeiro.
+            Descubra onde Pessoas, Finanças e Vendas estão travando lucro, autonomia e crescimento, e{" "}
+            <span style={{ color: "#D97945" }}>qual prioridade precisa ganhar estrutura primeiro.</span>
           </p>
 
           <div
