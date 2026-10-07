@@ -8,6 +8,7 @@ import { Manifesto } from "@/components/home/Manifesto";
 import { Pillars } from "@/components/home/Pillars";
 import { Experience } from "@/components/home/Experience";
 import { Audience } from "@/components/home/Audience";
+import { GuideSection } from "@/components/home/GuideSection";
 import { Testimonials } from "@/components/home/Testimonials";
 import { FinalCTA } from "@/components/home/FinalCTA";
 import { Footer } from "@/components/home/Footer";
@@ -40,6 +41,7 @@ function Index() {
         <VSLSection />
         <PainPoints />
         <Audience />
+        <GuideSection />
         <Manifesto />
         <Pillars />
         <Experience />
