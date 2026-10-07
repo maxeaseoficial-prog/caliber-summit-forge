@@ -46,12 +46,13 @@ export function Header() {
           <Logo variant="compact" className="w-28 sm:w-36 md:w-44" />
         </a>
 
-        <div className="min-w-0 text-center leading-tight">
-          <p className="font-sans text-[0.68rem] font-bold uppercase tracking-[0.08em] text-foreground sm:text-sm md:text-base">
-            10 Dezembro
-          </p>
-          <p className="mt-0.5 font-sans text-[0.6rem] tracking-wide text-muted-foreground sm:text-xs md:text-sm">
-            Cuiabá - MT
+        <div className="min-w-0 justify-self-center text-center">
+          <p className="flex max-w-[48vw] flex-wrap items-center justify-center gap-x-2 gap-y-1 font-sans text-[0.58rem] font-bold uppercase leading-tight tracking-[0.08em] text-foreground sm:max-w-none sm:flex-nowrap sm:text-[0.72rem] md:gap-x-2.5 md:text-[0.82rem] lg:text-[0.88rem]">
+            <span className="whitespace-nowrap">10 de Dezembro</span>
+            <span aria-hidden className="text-copper/80">•</span>
+            <span className="whitespace-nowrap">Cuiabá</span>
+            <span aria-hidden className="text-copper/80">•</span>
+            <span className="whitespace-nowrap">3 horas presenciais</span>
           </p>
         </div>
 
