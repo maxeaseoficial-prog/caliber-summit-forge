@@ -12,26 +12,34 @@ export function GuideSection() {
   return (
     <section
       id="quem-vai-guiar"
-      className="relative isolate overflow-hidden bg-background lg:min-h-[640px] xl:min-h-[660px]"
+      className="relative isolate min-h-[760px] overflow-hidden bg-background sm:min-h-[780px] lg:min-h-[680px] xl:min-h-[700px]"
     >
       <img
         src={leonardoHeroAsset.url}
         alt="Leonardo Froese"
-        className="pointer-events-none absolute right-0 top-0 h-[360px] w-full select-none object-contain object-top sm:h-[420px] lg:inset-y-0 lg:left-auto lg:right-0 lg:h-full lg:w-[58%] lg:max-w-none lg:object-contain lg:object-right"
+        className="pointer-events-none absolute inset-0 h-full w-full select-none object-cover object-[72%_38%] sm:object-[70%_36%] lg:object-[68%_34%]"
       />
 
       <div
         aria-hidden
-        className="guide-photo-shade pointer-events-none absolute inset-x-0 top-0 h-[430px] lg:inset-0 lg:h-full"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(90deg, rgba(0,0,0,0.96) 0%, rgba(0,0,0,0.91) 28%, rgba(0,0,0,0.75) 43%, rgba(0,0,0,0.42) 57%, rgba(0,0,0,0.13) 72%, rgba(0,0,0,0.02) 100%)",
+        }}
       />
 
       <div
         aria-hidden
-        className="guide-photo-fade pointer-events-none absolute inset-x-0 top-0 h-[460px] lg:inset-0 lg:h-full"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(0,0,0,0.04) 0%, rgba(0,0,0,0.04) 58%, rgba(0,0,0,0.42) 82%, var(--background) 100%)",
+        }}
       />
 
-      <div className="relative z-10 mx-auto w-full max-w-[78rem] px-6 pb-16 pt-[300px] sm:px-10 sm:pt-[340px] lg:flex lg:min-h-[640px] lg:items-center lg:px-10 lg:py-16 xl:min-h-[660px]">
-        <div className="max-w-[620px]">
+      <div className="relative z-10 mx-auto flex min-h-[760px] w-full max-w-[78rem] items-end px-6 pb-16 pt-[300px] sm:min-h-[780px] sm:px-10 sm:pb-20 sm:pt-[340px] lg:min-h-[680px] lg:items-center lg:px-10 lg:py-16 xl:min-h-[700px]">
+        <div className="max-w-[600px] lg:max-w-[610px]">
           <Reveal>
             <SectionEyebrow>Quem vai guiar você?</SectionEyebrow>
           </Reveal>
@@ -43,7 +51,7 @@ export function GuideSection() {
             </h2>
           </Reveal>
 
-          <div className="mt-6 space-y-4 text-[0.95rem] leading-relaxed text-foreground/85 sm:text-base lg:mt-7">
+          <div className="mt-6 space-y-4 text-[0.95rem] leading-relaxed text-foreground/90 sm:text-base lg:mt-7">
             <Reveal delay={180}>
               <p>
                 Leonardo Froese é fundador da Cáliber e do Grupo Froese. Há <span className="text-[#D97945]">19 anos</span> atua dentro de empresas, estruturando gestão ao lado do dono e transformando problemas de operação em decisões práticas.
