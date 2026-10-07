@@ -3,6 +3,7 @@ import { Header } from "@/components/home/Header";
 import { Hero } from "@/components/home/Hero";
 import { ScarcityTicker } from "@/components/home/ScarcityTicker";
 import { VSLSection } from "@/components/home/VSLSection";
+import { PainPoints } from "@/components/home/PainPoints";
 import { Manifesto } from "@/components/home/Manifesto";
 import { Pillars } from "@/components/home/Pillars";
 import { Experience } from "@/components/home/Experience";
@@ -37,6 +38,7 @@ function Index() {
         <Hero />
         <ScarcityTicker />
         <VSLSection />
+        <PainPoints />
         <Manifesto />
         <Pillars />
         <Experience />
