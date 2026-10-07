@@ -193,6 +193,21 @@
   }
 }
 
+/* Guide portrait: preserve the photo while shading the text side. */
+.guide-photo-shade {
+  background: linear-gradient(90deg, oklch(0.08 0.004 40 / 78%) 0%, oklch(0.08 0.004 40 / 70%) 32%, oklch(0.08 0.004 40 / 48%) 50%, oklch(0.08 0.004 40 / 12%) 72%, transparent 100%);
+}
+
+.guide-photo-fade {
+  background: linear-gradient(180deg, oklch(0.08 0.004 40 / 6%) 0%, transparent 48%, oklch(0.08 0.004 40 / 45%) 76%, var(--background) 100%);
+}
+
+@media (max-width: 63.999rem) {
+  .guide-photo-shade {
+    background: linear-gradient(180deg, oklch(0.08 0.004 40 / 8%), oklch(0.08 0.004 40 / 18%) 55%, var(--background) 100%);
+  }
+}
+
 /* Hero portrait integration: stacked on small screens, split composition on desktop. */
 .hero-portrait {
   inset: 0 0 auto;
