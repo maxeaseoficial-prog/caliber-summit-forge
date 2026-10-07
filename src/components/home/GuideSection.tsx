@@ -1,3 +1,4 @@
+import leonardoHeroAsset from "@/assets/leonardo-hero-original.jpg.asset.json";
 import { Reveal, SectionEyebrow } from "./primitives";
 
 const METRICS = [
@@ -14,7 +15,7 @@ export function GuideSection() {
       className="relative isolate overflow-hidden bg-background lg:min-h-[640px] xl:min-h-[660px]"
     >
       <img
-        src="/images/leonardo-hero-original.jpg"
+        src={leonardoHeroAsset.url}
         alt="Leonardo Froese"
         className="pointer-events-none absolute inset-x-0 top-0 h-[360px] w-full select-none object-cover object-[68%_center] sm:h-[420px] lg:inset-0 lg:h-full lg:object-cover lg:object-[70%_center]"
       />
