@@ -107,8 +107,7 @@ export function Hero() {
           >
             <PrimaryCTA
               href="#participar"
-              className="w-full rounded-full px-10 sm:w-auto sm:min-w-56"
-              gradient="linear-gradient(135deg, #004d00 0%, #008000 52%, #16a016 100%)"
+              className="w-full rounded-full px-10 [--gradient-ember:linear-gradient(135deg,#004d00_0%,#008000_52%,#16a016_100%)] sm:w-auto sm:min-w-56"
             >
               Quero participar
             </PrimaryCTA>
