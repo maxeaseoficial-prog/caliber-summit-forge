@@ -78,7 +78,7 @@ export function Hero() {
         <div className="min-w-0 max-w-[46rem] text-left lg:pr-8 xl:pr-10">
           <p
             className={cn(
-              "max-w-[46rem] font-display text-4xl leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-[3.25rem] xl:text-6xl 2xl:text-7xl",
+              "max-w-[46rem] font-display text-4xl leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-[4rem] xl:text-[4.5rem] 2xl:text-[5rem]",
               step(0),
             )}
             style={{ transitionTimingFunction: "var(--ease-cinematic)" }}
