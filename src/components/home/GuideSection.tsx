@@ -1,4 +1,3 @@
-import leonardoGuidePhoto from "@/assets/leonardo-guide-photo";
 import { Reveal, SectionContainer, SectionEyebrow } from "./primitives";
 
 const METRICS = [
@@ -15,7 +14,7 @@ export function GuideSection() {
       className="relative min-h-[58rem] overflow-hidden bg-background py-0 sm:min-h-[62rem] lg:min-h-[48rem] lg:py-28"
     >
       <img
-        src={leonardoGuidePhoto}
+        src="/images/leonardo-guide.svg"
         alt="Leonardo Froese"
         className="pointer-events-none absolute inset-x-0 top-0 h-[34rem] w-full select-none object-cover object-[42%_center] sm:h-[38rem] lg:inset-0 lg:h-full lg:object-center"
       />
