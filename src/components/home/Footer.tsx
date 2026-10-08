@@ -34,7 +34,7 @@ export function Footer() {
       </div>
       <div aria-hidden className="rule-ember my-10 opacity-60" />
       <p className="text-center font-sans text-xs tracking-wide text-muted-foreground/70 md:text-left">
-        © {new Date().getFullYear()} Cáliber Summit. Todos os direitos reservados.
+        © {new Date().getFullYear()} RPM Summit. Todos os direitos reservados.
       </p>
     </SectionContainer>
   );
