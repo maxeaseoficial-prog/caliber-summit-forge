@@ -5,6 +5,8 @@ import { Logo } from "./primitives";
 const TICKET_GRADIENT =
   "linear-gradient(135deg, #004d00 0%, #008000 52%, #16a016 100%)";
 
+const PURCHASE_URL = "https://pay.kiwify.com.br/AFc4KI8";
+
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
 
@@ -57,7 +59,7 @@ export function Header() {
         </div>
 
         <a
-          href="#participar"
+          href={PURCHASE_URL}
           className="justify-self-end rounded-full px-4 py-2.5 font-sans text-[0.62rem] font-bold uppercase tracking-[0.12em] text-white transition-[filter,transform] duration-300 hover:brightness-115 active:translate-y-px sm:px-7 sm:py-3 sm:text-[0.72rem] md:min-w-40 md:text-center"
           style={{ backgroundImage: TICKET_GRADIENT }}
         >

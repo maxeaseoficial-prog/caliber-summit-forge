@@ -2,9 +2,12 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { EmberField, PrimaryCTA } from "./primitives";
 
+const PURCHASE_URL = "https://pay.kiwify.com.br/AFc4KI8";
+
 export function Hero() {
   const [enter, setEnter] = useState(false);
   const [offset, setOffset] = useState(0);
+
   useEffect(() => {
     const t = window.setTimeout(() => setEnter(true), 60);
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -74,6 +77,7 @@ export function Hero() {
       <div className="hidden md:block">
         <EmberField count={16} />
       </div>
+
       <div className="relative z-10 mx-auto grid w-full max-w-[78rem] grid-cols-1 px-6 pt-[54svh] pb-16 md:px-10 md:pt-[58svh] md:pb-20 lg:min-h-[100svh] lg:grid-cols-[minmax(0,56%)_minmax(0,44%)] lg:items-center lg:pt-44 lg:pb-20">
         <div className="min-w-0 max-w-[46rem] text-left lg:pr-8 xl:pr-10">
           <p
@@ -106,7 +110,7 @@ export function Hero() {
             style={{ transitionTimingFunction: "var(--ease-cinematic)" }}
           >
             <PrimaryCTA
-              href="#participar"
+              href={PURCHASE_URL}
               className="w-full rounded-full px-10 [--gradient-ember:linear-gradient(135deg,#004d00_0%,#008000_52%,#16a016_100%)] sm:w-auto sm:min-w-56"
             >
               Quero participar

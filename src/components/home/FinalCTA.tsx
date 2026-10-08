@@ -1,5 +1,7 @@
 import { EmberField, PrimaryCTA, Reveal } from "./primitives";
 
+const PURCHASE_URL = "https://pay.kiwify.com.br/AFc4KI8";
+
 export function FinalCTA() {
   return (
     <section id="participar" className="grain relative overflow-hidden py-32 md:py-48">
@@ -29,7 +31,7 @@ export function FinalCTA() {
         <Reveal delay={280}>
           <div className="mt-12">
             <PrimaryCTA
-              href="#contato"
+              href={PURCHASE_URL}
               className="rounded-full px-10 py-5 text-[0.8rem] [--gradient-ember:linear-gradient(135deg,#004d00_0%,#008000_52%,#16a016_100%)]"
             >
               Quero Participar

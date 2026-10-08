@@ -13,6 +13,7 @@ import { EventInfo } from "@/components/home/EventInfo";
 import { FinalCTA } from "@/components/home/FinalCTA";
 import { Footer } from "@/components/home/Footer";
 
+const PURCHASE_URL = "https://pay.kiwify.com.br/AFc4KI8";
 const TITLE = "Cáliber Summit: Mentalidade, Estrutura e Prosperidade";
 const DESCRIPTION =
   "Um encontro para empresários e líderes que buscam clareza, estrutura, conexões estratégicas e crescimento consistente.";
@@ -44,7 +45,7 @@ function Index() {
         <div className="bg-background px-6 py-10 sm:px-10 sm:py-12">
           <div className="mx-auto flex w-full max-w-[78rem] justify-center">
             <PrimaryCTA
-              href="#participar"
+              href={PURCHASE_URL}
               className="w-full rounded-full px-10 [--gradient-ember:linear-gradient(135deg,#004d00_0%,#008000_52%,#16a016_100%)] sm:w-auto sm:min-w-56"
             >
               Quero participar
@@ -56,7 +57,7 @@ function Index() {
         <div className="bg-background px-6 py-10 sm:px-10 sm:py-12">
           <div className="mx-auto flex w-full max-w-[78rem] justify-center">
             <PrimaryCTA
-              href="#participar"
+              href={PURCHASE_URL}
               className="w-full rounded-full px-10 [--gradient-ember:linear-gradient(135deg,#004d00_0%,#008000_52%,#16a016_100%)] sm:w-auto sm:min-w-56"
             >
               Quero participar
