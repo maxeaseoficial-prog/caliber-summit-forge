@@ -27,7 +27,7 @@ export function Experience() {
       <div className="grid gap-14 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-20">
         <div className="min-w-0 lg:sticky lg:top-32 lg:self-start">
           <Reveal>
-            <SectionEyebrow>A experiência Cáliber</SectionEyebrow>
+            <SectionEyebrow>A experiência</SectionEyebrow>
           </Reveal>
           <Reveal delay={120}>
             <p className="mt-8 font-display text-4xl leading-[1.08] tracking-tight sm:text-5xl">
