@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Play } from "lucide-react";
-import { Logo, Reveal, SectionContainer, SectionEyebrow } from "./primitives";
+import { Logo, Reveal, SectionContainer } from "./primitives";
 
 type Testimonial = {
   id: string;
@@ -22,12 +22,9 @@ export function Testimonials() {
       id="depoimentos"
       className="border-t border-border py-24 md:py-32"
     >
-      <div className="mb-12 max-w-2xl md:mb-16">
-        <Reveal>
-          <SectionEyebrow>Depoimentos</SectionEyebrow>
-        </Reveal>
+      <div className="mx-auto mb-12 max-w-4xl text-center md:mb-16">
         <Reveal delay={120}>
-          <h2 className="mt-8 font-display text-4xl leading-[1.08] tracking-tight sm:text-5xl">
+          <h2 className="font-display text-4xl leading-[1.08] tracking-tight sm:text-5xl">
             Experiências que
             <span className="block text-ember-gradient">merecem ser ouvidas.</span>
           </h2>
