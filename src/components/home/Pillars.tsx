@@ -1,4 +1,4 @@
-import { Reveal, SectionContainer, SectionEyebrow } from "./primitives";
+import { Reveal, SectionContainer } from "./primitives";
 
 const PILLARS = [
   {
@@ -22,7 +22,11 @@ export function Pillars() {
   return (
     <SectionContainer id="pilares" className="py-24 md:py-36">
       <Reveal>
-        <SectionEyebrow>Os três pilares</SectionEyebrow>
+        <div className="text-center">
+          <p className="font-sans text-sm font-semibold uppercase tracking-[0.32em] text-copper sm:text-base md:text-lg">
+            Os três pilares
+          </p>
+        </div>
       </Reveal>
 
       <ul className="mt-14 grid gap-px border-t border-border md:grid-cols-3">
